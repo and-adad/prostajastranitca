@@ -1,36 +1,3 @@
-<?php
-$chislo = $_POST['chislo'];
-$chislo_1 = $_POST['chislo_1'];
-$summa = $_POST['summa'];
-$sum = $chislo + $chislo_1;
-if($summa == $sum)
-{
-	//echo 'Все верно';
-
-if(!empty($_POST['otpravit_1']))
-{
-	$email = $_POST['email'].'<br>';
-	$name = $_POST['name'].'<br>';
-	$password = $_POST['password'].'<br>';
-	$hidden = $_POST['hidden'].'<br>';
-	$date = date("Y - d - m h-i-s");
-	$radio = $_POST['radio'].'<br>';
-	$checkbox = $_POST['checkbox'].'<br>';
-	$textarea = $_POST['textarea'].'<br>';
-	$data = $email.'::'.$name.'::'.$password.'::'.$hidden.'::'.$email.'::'.$date.'::'.$radio.'::'.$checkbox.'::'.$textarea."\n";
-	file_put_contents('1.txt', $data, FILE_APPEND | LOCK_EX);
-}
-
-}
-else
-{
-	echo 'Вам нужно в первый класс!';
-}
-
-
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
